@@ -18,7 +18,7 @@
    ```
 2. **复制环境变量模版**
    ```bash
-   cp .env.example .env.local
+   cp .env.local .env.local
    ```
 3. **配置 Supabase 项目参数（见下文环境变量说明）**
 4. **启动开发服务器**
