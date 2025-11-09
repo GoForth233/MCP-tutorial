@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Playfair_Display, Clicker_Script } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
@@ -19,6 +19,20 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
+  display: "swap",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const clickerScript = Clicker_Script({
+  variable: "--font-clicker-script",
+  display: "swap",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+      <body className={`${geistSans.variable} ${playfairDisplay.variable} ${clickerScript.variable} ${geistSans.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

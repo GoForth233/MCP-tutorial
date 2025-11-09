@@ -10,6 +10,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'playfair': ['var(--font-playfair-display)', 'serif'],
+        'clicker': ['var(--font-clicker-script)', 'cursive'],
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
