@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import Image from "next/image";
 import { AddBeanDialog } from "@/components/add-bean-dialog";
+import { TweetCard } from "@/components/ui/tweet-card";
 
 // 图片资源常量
 const imgFotterImage = "https://www.figma.com/api/mcp/asset/9bd0758c-4c0f-41b4-8923-40684599cac4";
@@ -233,6 +234,30 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Hot Topics Section */}
+      <section className="py-20 md:py-32">
+        <div className="container mx-auto px-6 md:px-12">
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-[#603809] text-center mb-4">
+            社区热议
+          </h2>
+          <p className="text-[#707070] text-lg md:text-xl font-playfair text-center mb-16 max-w-3xl mx-auto">
+            看看社区里大家都在讨论什么
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="flex justify-center">
+              <TweetCard id="1976382199965602022" />
+            </div>
+            <div className="flex justify-center">
+              <TweetCard id="1976437762950824362" />
+            </div>
+            <div className="flex justify-center">
+              <TweetCard id="914134197413072898" />
             </div>
           </div>
         </div>
